@@ -1,3 +1,4 @@
 resnet50_3k3e.h5
 resnet50_5k3e.h5
 /__pycache__
+*.pdf

@@ -6,9 +6,6 @@ from __future__ import print_function
 
 import argparse
 
-from keras.datasets import mnist
-from keras.layers import Input
-
 from resnet50_3k3e import ResNet50_3k3e
 from resnet50_5k3e import ResNet50_5k3e
 from configs import bcolors
