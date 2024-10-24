@@ -1,5 +1,5 @@
 '''
-usage: python gen_diff.py -h
+usage: gen_diff_resnet50-cifar10.py blackout 0.5 0.3 7 250 250 0.2
 '''
 
 from __future__ import print_function
@@ -18,7 +18,6 @@ import tensorflow as tf
 import imageio
 import numpy as np
 from tensorflow.keras import backend as K
-
 
 # read the parameter
 # argument parsing
@@ -84,7 +83,8 @@ for _ in range(args.seeds):
     label1 = np.argmax(resnet50_3k3e.predict(gen_img))
     label2 = np.argmax(resnet50_5k3e.predict(gen_img))
 
-    if not label1 == label2:
+    # Check inconsistent prediction label
+    if not label1 == label2:    
         print(bcolors.OKGREEN + 'input already causes different outputs: {}, {}'.format(label1, label2) + bcolors.ENDC)
 
         update_coverage(gen_img, resnet50_3k3e, resnet50_3k3e_layer_dict, args.threshold)

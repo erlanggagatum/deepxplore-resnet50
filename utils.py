@@ -16,7 +16,7 @@ def deprocess_image(x):
 def normalize(x):
     # utility function to normalize a tensor by its L2 norm
     
-    print('====== normalize: x value', x)
+    # print('====== normalize: x value', x)
     normalized = x / (K.sqrt(K.mean(K.square(x))) + 1e-5)
     
     return normalized

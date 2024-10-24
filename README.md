@@ -45,7 +45,10 @@ threshold = "threshold for determining neuron activated", type=float
 ## Weights
 Weights is not available on github due to size limit. Therefore, please download it in the 
 [following link](https://drive.google.com/drive/folders/1nIJxMXNlgaBa9nlE9zXTWec1PQ_ZH8Qd?usp=sharing)
-, and extract it in the root folder.
+, and extract it in the root folder. As an additional information, resnet50_5k3e means Resnet-50 was trained using 5k sample dataset in 3 epochs. Pretrained ResNet-50 are frozen, and the training only performed in the custom classification head.
+
+## Other information
+The whole originaly from [DeepXplore official repository](https://github.com/peikexin9/deepxplore), and it is being modified to match the structure of ResNet-50 and its implementation on CIFAR-10 dataset. Moreover, some updates has been made to match the newer version of python (v3.5).
 
 ## Author
 - [@erlanggagatum](https://www.github.com/erlanggagatum)
